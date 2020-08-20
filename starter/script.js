@@ -23,3 +23,11 @@ template literals
 */
 
 console.log(`some random text and then ${variable} and other ${variable2}`);
+
+const n = `emmanuel lopez`;
+console.log(n.startsWith('e')):
+console.log(n.endsWith('z'));
+console.log(n.includes('z'));
+
+console.log(`${variable}`.repeat(5));
+

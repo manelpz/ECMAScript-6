@@ -12,3 +12,14 @@
 (fucntion(){
     var  c = 3;
 })();
+
+
+
+
+//strings
+
+/*
+template literals
+*/
+
+console.log(`some random text and then ${variable} and other ${variable2}`);

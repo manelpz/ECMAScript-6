@@ -113,3 +113,16 @@ Person.prototype.myFriends5 = function(friends) {
 var friends = ['Bob','Jane', 'Mark'];
 
 new Person('john').myFriends5(friends);
+
+
+//ES6
+function Person(name) {
+    this.name = name;    
+}
+//for accessing to THIS adding binding()
+Person.prototype.myFriends6 = function(friends) {
+    var arr = friends.map(el => `${this.name} is friends with ${el}`
+    );
+    
+    console.log(arr);
+}

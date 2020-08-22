@@ -150,11 +150,24 @@ const {firstName, lastName} = obj;
 
 const {firstName: a, lastName: b} = obj;
 
-
+//fucntions
 function calcAgeRetirement(year){
     const age = new Date().getFullYear() - year;
 }
 
 const [age2, retirement] = calcAgeRetirement(1990);
 console.log(age2);
+
+
+//Arrays
+
+const boxes = document.querySelectorAll('.box');
+
+var boxesArr5 = Array.prototype.slice.call(boxes);
+boxesArr5.forEach(function(cur) {
+    cur.style.backgroundColor = 'dodgerblue';
+});
+
+//ES6
+Array.from(boxes).forEach(cur => cur.style.backgroundColor = 'dodgerblue');
 

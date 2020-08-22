@@ -139,3 +139,13 @@ var age = john[1];
 
 const [name, age] = john['john', 29];
 
+//Objects
+
+const obj = {
+    firstName: 'john',
+    lastName: 'Smith'
+};
+
+const {firstName, lastName} = obj;
+
+const {firstName: a, lastName: b} = obj;

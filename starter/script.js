@@ -126,3 +126,16 @@ Person.prototype.myFriends6 = function(friends) {
     
     console.log(arr);
 }
+
+
+//destructuring
+
+//ES5
+var john = ['John', 29];
+var name = john[0];
+var age = john[1];
+
+//ES6
+
+const [name, age] = john['john', 29];
+

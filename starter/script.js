@@ -64,7 +64,7 @@ console.log(ages6);
 
 
 
-//ES5
+//ES5 example THIS
 
 var box5 = {
     color: 'green',
@@ -94,3 +94,22 @@ const box6 = {
     }
 }
 box6.clickMe();
+
+
+//ES5
+
+function Person(name) {
+    this.name = name;    
+}
+//for accessing to THIS adding binding()
+Person.prototype.myFriends5 = function(friends) {
+    var arr = friends.map(function(el){
+        return this.name + ' is friends with '+ el;
+    }.bind(this));
+    
+    console.log(arr);
+}
+
+var friends = ['Bob','Jane', 'Mark'];
+
+new Person('john').myFriends5(friends);

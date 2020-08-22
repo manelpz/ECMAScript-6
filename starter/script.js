@@ -171,3 +171,21 @@ boxesArr5.forEach(function(cur) {
 //ES6
 Array.from(boxes).forEach(cur => cur.style.backgroundColor = 'dodgerblue');
 
+
+
+//array ES5
+
+for(var i = 0; i < boxesArr5.length; i++){
+    if(boxesArr5[i].className === 'box blue'){
+        continue;
+    }
+    boxesArr5[i].textContent = 'I changed to blue!';
+}
+
+//array ES6
+for(const cur of boxesArr6){
+    if(cur.className.includes('blue')){
+        continue;
+    }
+    cur.textContent = 'I changed to blue!';
+}

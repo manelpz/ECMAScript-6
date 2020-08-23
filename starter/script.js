@@ -189,3 +189,30 @@ for(const cur of boxesArr6){
     }
     cur.textContent = 'I changed to blue!';
 }
+
+//array ES5
+
+var ages = [12,14,22,11];
+
+var full = ages.map(function(cur){
+    return cur >= 18;
+});
+
+console.log(full);// false false true false
+console.log(full.indexOf(true));// 2
+console.log(ages[full.indexOf(true)]);
+
+
+//array ES6
+console.log(ages.findIndex(cur => cur >= 18));
+console.log(ages.find(cur => cur >= 18));
+
+
+
+
+
+
+
+
+
+

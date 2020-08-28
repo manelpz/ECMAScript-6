@@ -323,9 +323,26 @@ console.log(question.get('question'));
 console.log(question.size);
 
 if(question.has(4)){
+    question.delete(4);
     console.log('answer 4 is here');
 }
 
 //delete all of them
 question.clear();
+
+
+question.forEach((value, key) => 
+    console.log(`This is ${key} and it's set to ${value}`)
+);
+
+
+//hash table, distructuring
+for (let [key, value] of question.entries()){
+    if(typeof(key) === 'number'){
+        console.log(`Answer ${key}: ${value}`);
+    }
+}
+
+const ans = parseInt(prompt('Write the correct answer'));
+console.log(question.get(ans === question.get('correct')));
 

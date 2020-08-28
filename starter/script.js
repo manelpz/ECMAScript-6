@@ -309,6 +309,12 @@ function SmithPerson(firstName, yearOfBirth, lastName = 'smith', nationality = '
 
 var john = new SmithPerson('john', 1990);
 
+//Maps
 
+const question = new Map();
+question.set('question','What is the official name of the latest major JavaScript');
+question.set(1, 'ES5');
+question.set(2, 'ES6');
+question.set(3, 'ES2015');
 
 

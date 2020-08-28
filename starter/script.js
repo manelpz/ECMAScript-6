@@ -316,5 +316,16 @@ question.set('question','What is the official name of the latest major JavaScrip
 question.set(1, 'ES5');
 question.set(2, 'ES6');
 question.set(3, 'ES2015');
+question.set('correct', 3);
+question.set('false','Wrong, please try again');
 
+console.log(question.get('question'));
+console.log(question.size);
+
+if(question.has(4)){
+    console.log('answer 4 is here');
+}
+
+//delete all of them
+question.clear();
 

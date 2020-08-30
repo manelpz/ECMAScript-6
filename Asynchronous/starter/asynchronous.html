@@ -38,10 +38,38 @@
                 resolve([523,488, 234, 345]);
             }, 1500);
         });
+
+        const getRecipe = recID => {
+            return new Promise((resolve,reject) => {
+                setTimeout(ID => {
+                    const recipe = {title: 'Fresh tomato pasta', publisher: 'Jonas'};
+                    resolve(`${ID}: ${recipe.title}`);
+                }, 1550, recID);
+            });
+        };
+
+        const getRelated = publisher => {
+            return new Promise((resolve, reject) => {
+                setTimeout(pub => {
+                    const recipe = {title: 'Fresh tomato pasta', publisher: 'Jonas'};
+                    resolve(`${pub}: ${recipe.title}`);
+                }, 1500, publisher);
+            });
+        };
+
          //IDs represent the entire array
         getIDs
         .then(IDs => {
             console.log(IDs);
+            //callback
+            return getRecipe(IDs[2]);
+        })
+        .then(recipe => {
+            console.log(recipe);
+            return getRelated('Jonas');
+        })
+        .the(recipe =>{
+            console.log(recipe);
         })
 
         .catch(error => {

@@ -109,6 +109,32 @@ fetch(`https://api.allorigins.win/raw?url=https://www.metaweather.com/api/locati
 getWeather(2487956);
 getWeather(44418);
 
+
+
+//await functions
+
+async function getWeatherAW(woeid){
+    try{
+        const result = await fetch(`https://api.allorigins.win/raw?url=https://www.metaweather.com/api/location/${woeid}/`);
+        const data = await result.json();
+        const tomorrow = data.consolidated_weather[1];
+        console.log(`Temperature tomorrow in ${data.title} stay between ${tomorrow.max_temp} and ${tomorrow.min_temp}`);
+
+        return data;
+    }catch(error){
+        alert(error);
+    }
+}
+
+getWeatherAW(2487956);
+
+let dataLondon;
+getWeatherAW(44418).then(data => {
+    dataLondon = data
+    console.log(dataLondon);
+});
+
+
     </script>
 </body>
 </html>
